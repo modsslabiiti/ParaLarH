@@ -1,0 +1,40 @@
+/*#ifndef PCH_H*/
+/*#define PCH_H*/
+
+#include <boost/graph/adjacency_list.hpp>
+#include <boost/graph/graph_traits.hpp>
+#include <boost/graph/dijkstra_shortest_paths.hpp>
+#include <boost/graph/prim_minimum_spanning_tree.hpp>
+#include <boost/graph/topological_sort.hpp>
+#include <boost/graph/filtered_graph.hpp>
+#include <boost/property_map/property_map.hpp>
+#include <boost/graph/connected_components.hpp>
+#include <boost/graph/graphviz.hpp>
+#include <boost/timer/timer.hpp>
+#include <boost/format.hpp>
+#include <boost/tokenizer.hpp>
+#include <boost/algorithm/string/split.hpp>
+#include <boost/algorithm/string/classification.hpp>
+#include <boost/algorithm/string/trim.hpp>
+#include <boost/lexical_cast.hpp>
+#include <boost/regex.hpp>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <set>
+#include <fstream>
+#include <memory>
+#include <algorithm>
+#include <functional>
+#include <thread>
+#include <mutex>
+#include <utility>
+#include <cmath>
+#include <cfloat>
+#include <random>
+#include <assert.h>
+#include <time.h>
+#include <tbb/tbb.h>
+
+/*#endif*/
