@@ -1,13 +1,14 @@
-Requirements:
+# Parallel FPGA Routers with Lagrange Relaxation
+## Requirements:
 
 C++ compiler support the C++11 standard
 Boost C++ library -- install it using any package manager (eg. apt-get install libboost-all-dev) or build it from source (www.boost.org)
 Intel TBB library -- download and extract the correct version for your platform from https://www.threadingbuildingblocks.org/download#stable-releases
 
-Note*****Boost version 1.6***********
-------------------------------------
+Note: Boost version 1.6
 
-Compilation steps:
+
+## Compilation steps:
 
 1. cd build
 2. export TBB_INC_DIR=<path to Intel TBB include directory>
@@ -22,7 +23,7 @@ Compilation steps:
 
 After following the steps above, the final executable (Router) will be placed in the 'build' subdirectory.
 
-------------------------------------
+***
 
 Before running the router:
 
@@ -40,7 +41,7 @@ eg. "./vpr fpga.xml ex5p --pack --place" would pack and place the benchmark call
 
 In this package, an example FPGA architecture (fpga.xml) and a packed & placed benchmark (ex5p) have been included in the "examples" directory. Other benchmarks from the MCNC suite are also included but only in blif format which need to be compiled using VTR first.
 
-------------------------------------
+***
 // Router in build directory....../home/rohita/paralar/build
 //go in that location copy it and paste it to examples directory
 Running the router:
@@ -49,8 +50,23 @@ Running the router:
 eg. "./Router fpga.xml ex5p 4 50 100" would route the "ex5p" benchmark with a channel width of 100 using 4 threads for 50 iterations. Note that the files "fpga.xml", "ex5p.blif", "ex5p.net", and "ex5p.place" has to be in the same directory as the "Router" executable.
 
 
-
-
 gdb --args ./Router <arch.xml> <benchmark_name> <num_threads> <num_of_iterations> <max_channel_capacity>
 
+***
 
+## Citation
+
+If you use this code in your research, please cite:
+
+```
+@article{agrawal2023parallel,
+  title={Parallel FPGA routers with lagrange relaxation},
+  author={Agrawal, Rohit and Ahuja, Kapil and Maheshwari, Dhaarna and Shaikh, Mohd Ubaid and Bouaziz, Mohamed and Kumar, Akash},
+  journal={IEEE Access},
+  volume={11},
+  pages={121786--121799},
+  year={2023},
+  publisher={IEEE}
+}
+
+```
